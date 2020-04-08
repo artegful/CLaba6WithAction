@@ -16,14 +16,29 @@ void FreeMem(Tree *tree);
 int Max(int a, int b);
 int Depth(Tree *ptr, int depCount);
 
-int main()
+int main(int argc, char *argv[])
 {
+    int i = 0;
     Tree *root;
     char letter;
     root = NULL;
     do
     {
-        letter = getchar();
+        if(argc > 1)
+        {
+            if(argv[1][i] == '\0')
+            {
+                break;
+            }
+            else
+            {
+                letter = argv[1][i++];
+            }
+        }
+        else
+        {
+            letter = getchar();
+        }
         if (isalpha(letter))
         {
             root = AddTree(root, letter);

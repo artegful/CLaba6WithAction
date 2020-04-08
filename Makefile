@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS= -pedantic -std=c89
 
-.PHONY: build run clean 
+.PHONY: build run test clean
 
 all: build
 
@@ -12,6 +12,9 @@ a.out:
 
 run: a.out
 	./a.out
+
+test: a.out
+	./a.out bacc
 
 clean:
 	rm -rf *.o a.out

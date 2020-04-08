@@ -30,10 +30,7 @@ int main(int argc, char *argv[])
             {
                 break;
             }
-            else
-            {
-                letter = argv[1][i++];
-            }
+            letter = argv[1][i++];
         }
         else
         {
@@ -112,6 +109,6 @@ int Depth(Tree *ptr, int depCount)
         if(ptr == NULL)
               return depCount;
  
-        return Max(Depth(ptr -> left, depCount+1), Depth(ptr -> right, depCount+1));
+        return Max(Depth(ptr->left, depCount+1), Depth(ptr->right, depCount+1));
 }
 

@@ -11,5 +11,7 @@ jobs:
         run: make build
       - name: Nominal Run
         run: make run
+      - name: Test Run
+        run: make test
       - name: Clean
         run: make clean
